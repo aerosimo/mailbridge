@@ -35,7 +35,6 @@ import jakarta.mail.Session;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import javax.naming.Context;
 import javax.naming.InitialContext;
 
 public class Connect {
@@ -46,7 +45,7 @@ public class Connect {
         log.info("Looking up email session from JNDI");
         try {
             InitialContext ctx = new InitialContext();
-            Session sess = (Session) ((Context) ctx.lookup("java:/comp/env")).lookup("mail/aerosimo");
+            Session sess = (Session) new InitialContext().lookup("java:/comp/env/mail/aerosimo");
             ctx.close();
             return sess;
         } catch (Exception err) {
