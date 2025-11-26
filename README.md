@@ -91,15 +91,15 @@ The required dependencies are defined in `pom.xml`. Below are the key dependenci
 
    Start server and access the application:
 
-    - REST Service: http://localhost:8080/postmaster/api/sendemail
-    - Web Interface: `http://localhost:8080/postmaster/index.jsp`
+    - REST Service: http://localhost:8080/mailbridge/api/bridge/dispatch
+    - Web Interface: `http://localhost:8080/mailbridge/index.jsp`
 
 ## Detailed Explanation of Components
 
 
 ### **REST Web Service** (JAX-RS)
 
-The REST web service is implemented in `com.aerosimo.ominet.postmaster.api.rest.PostmasterREST.java`.
+The REST web service is implemented in `com.aerosimo.ominet.api.MailBridgeREST.java`.
 
 Example sendMail REST Request:
 ```json

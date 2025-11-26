@@ -43,6 +43,7 @@ import jakarta.mail.internet.MimeMultipart;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Date;
 
@@ -68,6 +69,11 @@ public class RelayPoint {
 
             if (emailFiles != null && !emailFiles.isBlank()) {
                 for (String filePath : emailFiles.split(",")) {
+                    File file = new File(filePath.trim());
+                    if (!file.exists() || !file.isFile() || !file.canRead()) {
+                        log.warn("Attachment skipped: {} (missing or unreadable)", filePath);
+                        continue;
+                    }
                     MimeBodyPart attachPart = new MimeBodyPart();
                     attachPart.attachFile(filePath.trim());
                     multipart.addBodyPart(attachPart);
@@ -76,7 +82,7 @@ public class RelayPoint {
 
             msg.setContent(multipart);
             Transport.send(msg);
-            log.info("Message sent successfully to {}", emailAddress);
+            log.info("Sent mail to {} with subject '{}'", emailAddress, emailSubject);
             return "Message sent successfully";
         } catch (MessagingException | IOException err) {
             log.error("RelayPoint failed to send email", err);
