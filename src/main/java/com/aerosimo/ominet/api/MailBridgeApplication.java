@@ -34,7 +34,7 @@ package com.aerosimo.ominet.api;
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.core.Application;
 
-@ApplicationPath("/bridge/api")
+@ApplicationPath("/api")
 public class MailBridgeApplication extends Application {
     // Auto-scans classes annotated with @Path
 }
