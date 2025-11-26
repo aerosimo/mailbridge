@@ -85,8 +85,9 @@
         <jakarta.version>10.0.0</jakarta.version>
         <servlet.version>6.1.0</servlet.version>
         <jersey.version>3.1.11</jersey.version>
+        <angus.version>2.0.5</angus.version>
         <log4j.version>2.25.1</log4j.version>
-        <mail.version>2.1.1</mail.version>
+        <mail.version>2.1.4</mail.version>
         <jstl.version>3.0.1</jstl.version>
         <jws.version>3.0.0</jws.version>
         <rs.version>4.0.0</rs.version>
@@ -104,12 +105,16 @@
             <artifactId>jakarta.mail-api</artifactId>
             <version>${mail.version}</version>
         </dependency>
-        <!--
         <dependency>
-            <groupId>com.sun.mail</groupId>
-            <artifactId>jakarta.mail</artifactId>
+            <groupId>jakarta.activation</groupId>
+            <artifactId>jakarta.activation-api</artifactId>
             <version>${mail.version}</version>
-        </dependency> -->
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.angus</groupId>
+            <artifactId>angus-mail</artifactId>
+            <version>${angus.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.glassfish.jersey.containers</groupId>
             <artifactId>jersey-container-servlet</artifactId>
