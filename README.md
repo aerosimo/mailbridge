@@ -94,6 +94,8 @@ The required dependencies are defined in `pom.xml`. Below are the key dependenci
     - REST Service: http://localhost:8080/mailbridge/api/bridge/dispatch
     - Web Interface: `http://localhost:8080/mailbridge/index.jsp`
 
+![Project Cover](/src/main/webapp/assets/img/coding.jpg "Coding")
+
 ## Detailed Explanation of Components
 
 
