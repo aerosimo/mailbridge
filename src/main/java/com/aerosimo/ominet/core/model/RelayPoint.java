@@ -85,7 +85,12 @@ public class RelayPoint {
             log.info("Sent mail to {} with subject '{}'", emailAddress, emailSubject);
             return "Message sent successfully";
         } catch (MessagingException | IOException err) {
-            log.error("RelayPoint failed to send email", err);
+            log.error("RelayPoint failed to send email with the following: - {}", String.valueOf(err));
+            try {
+                Spectre.recordError("TE-20001", "RelayPoint failed to send email with the following " + err, RelayPoint.class.getName());
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
             return "Message not successful: " + err.getMessage();
         }
     }
