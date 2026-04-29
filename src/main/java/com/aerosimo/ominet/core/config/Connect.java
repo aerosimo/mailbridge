@@ -35,7 +35,9 @@ import jakarta.mail.Session;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.naming.Context;
 import javax.naming.InitialContext;
+import javax.naming.NamingException;
 
 public class Connect {
 
@@ -51,6 +53,18 @@ public class Connect {
         } catch (Exception err) {
             log.error("Email session lookup failed", err);
             throw new IllegalStateException("Email session lookup failed", err);
+        }
+    }
+
+    public static String tomcatURL() {
+        log.info("Looking up tomcat url");
+        try {
+            Context initCtx = new InitialContext();
+            Context envCtx = (Context) initCtx.lookup("java:comp/env");
+            return (String) envCtx.lookup("url/tomcatURL");
+        } catch (NamingException err) {
+            log.error("JNDI lookup for tomcat url failed", err);
+            return null;
         }
     }
 }

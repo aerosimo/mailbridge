@@ -3,7 +3,7 @@
 <details>
   <summary>License</summary>
 
-**MIT License © 2025 Aerosimo**
+**MIT License © 2026 Aerosimo**
 
 Permission is hereby granted, free of charge, to any person obtaining a copy  
 of this software and associated documentation files (the "Software"), to deal  
