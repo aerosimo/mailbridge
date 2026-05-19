@@ -48,12 +48,12 @@
     <!-- Title -->
     <title>MailBridge | Aerosimo Ltd</title>
     <!-- Favicon-->
-    <link href="assets/img/favicon.ico" rel="shortcut icon"/>
-    <link href="assets/img/favicon.ico" rel="icon" type="image/x-icon">
-    <link href="assets/img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
-    <link href="assets/img/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
-    <link href="assets/img/android-chrome-192x192.png" rel="android-chrome" sizes="192x192">
+    <link href="/uploads/images/favicon/favicon.ico" rel="shortcut icon"/>
+    <link href="/uploads/images/favicon/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="/uploads/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+    <link href="/uploads/images/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+    <link href="/uploads/images/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/uploads/images/favicon/android-chrome-192x192.png" rel="android-chrome" sizes="192x192">
     <style>
         :root {
             --primary: #4d3b7a;
@@ -171,7 +171,7 @@
 <body>
 <div class="container">
     <div class="branding">
-        <img src="https://thumbs4.imagebam.com/3e/10/82/MED2HDH_t.png" alt="Aerosimo Logo" />
+        <img src="/uploads/images/logo/logo.png" alt="Aerosimo Logo" />
     </div>
 
     <h1>MailBridge REST Tester</h1>
